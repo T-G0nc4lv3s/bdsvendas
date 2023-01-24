@@ -2,8 +2,27 @@
   padding: 10px 10px 40px 10px;
 }
 
+.app-sales-summary-container {
+  margin-top: 10px;
+}
+
 @media (min-width: 576px) {
   .app-container {
     padding: 40px 40px 60px 40px;
+  }
+  .app-sales-summary-container {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .app-container {
+    padding: 40px 10px 50px 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .app-container {
+    padding: 40px 120px 50px 120px;
   }
 }
