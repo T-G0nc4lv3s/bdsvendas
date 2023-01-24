@@ -1,0 +1,12 @@
+.header-container{
+    background-color: var(--primary-color);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+}
+
+.header-container-title{
+    font-size: 24px;
+    font-weight: 700;
+}
