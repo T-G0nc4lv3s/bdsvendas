@@ -7,6 +7,7 @@
   --primary-color: #ffffff;
   --secondary-color: #d9dbe4;
   --blue-100-color: #334ac4;
+  --grey-100-color: #8d8d8d;
 }
 
 body {
@@ -23,4 +24,9 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+.base-card {
+  background-color: var(--primary-color);
+  border-radius: 5px;
 }

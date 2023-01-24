@@ -1,0 +1,23 @@
+.filter-container {
+  height: 130px;
+  display: flex;
+  align-items: center;
+  padding: 40px 15px;
+}
+
+.filter-store-select__control {
+  height: 50px;
+  width: 270px;
+  border: var(--grey-100-color);
+  border-radius: 4px;
+}
+
+.filter-store-select__single-value {
+  color: var(--grey-100-color) !important;
+  size: 16px;
+  font-weight: 400;
+}
+
+.filter-store-select__indicator-separator {
+  display: none;
+}

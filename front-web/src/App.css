@@ -1,0 +1,9 @@
+.app-container {
+  padding: 10px 10px 40px 10px;
+}
+
+@media (min-width: 576px) {
+  .app-container {
+    padding: 40px 40px 60px 40px;
+  }
+}
