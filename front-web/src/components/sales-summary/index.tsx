@@ -4,13 +4,13 @@ import { buildPieChartConfig } from './helpers';
 import { formatPrice } from './../../utils/formatters';
 
 type Props = {
-  labels: string[];
+  labels?: string[];
   name: string;
-  series: number[];
+  series?: number[];
   summary?: number;
 };
 
-function SalesSummary({ labels, name, series, summary = 0 }: Props) {
+function SalesSummary({ labels = [], name, series = [], summary = 0 }: Props) {
   return (
     <div className="sales-summary-container base-card">
       <div className="sales-amount-container">
