@@ -5,15 +5,19 @@ import { FilterData, StoreDTO } from '../../types';
 import { requestBackend } from '../../utils/requests';
 import { useForm, Controller } from 'react-hook-form';
 
-function Filter() {
-  const [selectStores, setSelectStores] = useState<StoreDTO[]>([]);
+type Props = {
+  onFilterChange: (filter: FilterData) => void;
+};
+
+function Filter({ onFilterChange }: Props) {
+  const [stores, setStores] = useState<StoreDTO[]>([]);
   const { setValue, getValues, control } = useForm<FilterData>();
 
   useEffect(() => {
     requestBackend
       .get<StoreDTO[]>('/stores')
       .then((response) => {
-        setSelectStores(response.data);
+        setStores(response.data);
       })
       .catch(() => {
         console.log('Error fetching store');
@@ -26,8 +30,7 @@ function Filter() {
     const obj: FilterData = {
       store: getValues('store')
     };
-
-    console.log(obj);
+    onFilterChange(obj);
   };
 
   return (
@@ -38,7 +41,7 @@ function Filter() {
         render={({ field }) => (
           <Select
             {...field}
-            options={selectStores}
+            options={stores}
             classNamePrefix="filter-store-select"
             getOptionLabel={(store: StoreDTO) => store.name}
             getOptionValue={(store: StoreDTO) => store.id}
